@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <!-- Modern Font: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background gradient blobs -->
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h1>Dream<span>Forge</span></h1>
+            </div>
+            <p>Trí tuệ nhân tạo - Biến trí tưởng tượng thành tác phẩm nghệ thuật.</p>
+        </header>
+
+        <section class="generator-card glass-panel">
+            <div class="input-group">
+                <textarea 
+                    id="prompt-input" 
+                    placeholder="Mô tả bức ảnh bạn muốn tạo... (VD: A futuristic city in neon lights, cyberpunk style, highly detailed)"
+                    rows="3"
+                ></textarea>
+                <button id="generate-btn" class="primary-btn">
+                    <span class="btn-text">Generate Image</span>
+                    <i class="fa-solid fa-arrow-right icon-regular"></i>
+                    <i class="fa-solid fa-spinner fa-spin icon-loading" style="display: none;"></i>
+                </button>
+            </div>
+            <div class="error-message" id="error-message"></div>
+        </section>
+
+        <section class="result-container">
+            <div id="image-placeholder" class="image-wrapper glass-panel placeholder-active">
+                <i class="fa-regular fa-image placeholder-icon"></i>
+                <p>Ảnh của bạn sẽ xuất hiện ở đây...</p>
+            </div>
+            <div id="image-result" class="image-wrapper glass-panel" style="display: none;">
+                <img id="generated-img" src="" alt="Generated AI Image">
+                <div class="image-actions">
+                    <button id="download-btn" class="secondary-btn" title="Download Image">
+                        <i class="fa-solid fa-download"></i> Tải ảnh xuống
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
